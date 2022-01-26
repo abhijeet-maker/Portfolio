@@ -58,6 +58,7 @@
             <h1 class="mb-0">
 
                 {{user.first_name}}
+                {% endfor %}
                 <span class="text-primary">{{user.last_name}}</span>
             </h1>
             <div class="subheading mb-5">
@@ -65,7 +66,7 @@
                 <a href="mailto:{{user.mail}}">{{user.mail}}</a>
             </div>
             <p class="lead mb-5">{{user.about}}</p>
-            {% endfor %}
+
             <div class="social-icons">
                 <a class="social-icon" href="#!"><i class="fab fa-linkedin-in"></i></a>
                 <a class="social-icon" href="#!"><i class="fab fa-github"></i></a>

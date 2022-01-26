@@ -28,7 +28,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'wwbuc1__+r55wcbedhuv8klb(625h*5c4m1(gzc@nc6r%byakj'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 # ALLOWED_HOSTS = []
 ALLOWED_HOSTS = ['myfolioabhi01.herokuapp.com','*', 'localhost', '127.0.0.1']
@@ -131,6 +131,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "download_raw")
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 CSRF_COOKIE_SECURE = True
 SESSION_COOKIE_SECURE = True
-SECURE_SSL_REDIRECT = False
+SECURE_SSL_REDIRECT = True
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 django_heroku.settings(locals())
