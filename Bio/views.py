@@ -5,7 +5,8 @@ from Bio.models import User
 from django.http import HttpResponse
 # Create your views here.
 def index(request):
-    user=User.objects.get()
+    user=User.objects.all()
+
 
     #user={'first_name':"Abhi",'last_name':"jeet"}
     # latest_question_list = Question.objects.order_by('-pub_date')[:5]
