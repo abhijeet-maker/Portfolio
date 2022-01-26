@@ -10,7 +10,7 @@ def index(request):
     #    print(user.first_name,user.last_name,user.address)
     #args={'user':user}
 
-    #user={'first_name':"Abhi",'last_name':"jeet"}
+    data={'first_name':"Abhi",'last_name':"jeet",'address':qwerty,'about':"wqertyuii"}
     # latest_question_list = Question.objects.order_by('-pub_date')[:5]
     # context = {'latest_question_list': latest_question_list}
     #return render(request, 'index.html',{'user':user})
