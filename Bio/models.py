@@ -7,7 +7,7 @@ class User(models.Model):
     first_name = models.CharField(max_length=200, default=None)
     last_name = models.CharField(max_length=200, default=None)
     address = models.CharField(max_length=200, default=None)
-    phone = models.CharField(max_length=17, unique=True)
+    phone = models.CharField(max_length=200, unique=True)
     # phone=models.IntegerField(default=None)
     mail = models.CharField(max_length=30, default=None)
     prof_img = models.ImageField(upload_to='profile_pic/', default=None)
