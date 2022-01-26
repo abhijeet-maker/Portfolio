@@ -52,17 +52,17 @@
 <div class="container-fluid p-0">
     <!-- About-->
     <section class="resume-section" id="about">
-
+        {% for user in data %}
         <div class="resume-section-content">
 
-            {% for user in data %}
+
             <h1 class="mb-0">
 
                 {{user.first_name}}
                 {{data}}
                 <span class="text-primary">{{user.last_name}}</span>
             </h1>
-            {% endfor %}
+
             <div class="subheading mb-5">
                 {{user.address}}
                 <a href="mailto:{{user.mail}}">{{user.mail}}</a>
@@ -76,6 +76,7 @@
                 <a class="social-icon" href="#!"><i class="fab fa-facebook-f"></i></a>
             </div>
         </div>
+        {% endfor %}
 
     </section>
     <hr class="m-0"/>
