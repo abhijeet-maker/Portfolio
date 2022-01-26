@@ -65,7 +65,7 @@
             {% endfor %}
             <div class="subheading mb-5">
                 {% for user in data %}
-                {{user.address}}
+                {{user.address}}{{user.phone}}
                 <a href="mailto:{{user.mail}}">{{user.mail}}</a>
             </div>
             <p class="lead mb-5">{{user.about}}</p>
