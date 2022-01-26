@@ -54,13 +54,15 @@
     <section class="resume-section" id="about">
 
         <div class="resume-section-content">
-            {% for user in xyz %}
+            {{data}}
+            {% for user in data %}
             <h1 class="mb-0">
 
                 {{user.first_name}}
-                {% endfor %}
+                {{data}}
                 <span class="text-primary">{{user.last_name}}</span>
             </h1>
+            {% endfor %}
             <div class="subheading mb-5">
                 {{user.address}}
                 <a href="mailto:{{user.mail}}">{{user.mail}}</a>
