@@ -26,10 +26,10 @@ class User(models.Model):
 
     # Intermediate School Detail
 
-    intermediate=models.TextField(max_length=500, default=None)
-    intermediate_specialisations=models.TextField(max_length=50, default=None)
-    intermediate_percentage=models.DecimalField(max_digits=4,decimal_places=2)
-    intermediate_date=models.DateField()
+    #intermediate=models.TextField(max_length=500, default=None)
+    #intermediate_specialisations=models.TextField(max_length=50, default=None)
+    #intermediate_percentage=models.DecimalField(max_digits=4,decimal_places=2)
+    #intermediate_date=models.DateField()
 
     #School Detail
     #matriculation=models.TextField(max_length=500, default=None)
