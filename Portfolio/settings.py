@@ -129,8 +129,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "download_raw")
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
-CSRF_COOKIE_SECURE = False
-SESSION_COOKIE_SECURE = False
-SECURE_SSL_REDIRECT = False
+#CSRF_COOKIE_SECURE = False
+#SESSION_COOKIE_SECURE = False
+#SECURE_SSL_REDIRECT = False
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 django_heroku.settings(locals())
