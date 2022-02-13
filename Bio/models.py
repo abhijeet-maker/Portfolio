@@ -18,7 +18,7 @@ class User(models.Model):
 
     #College
 
-    university=models.TextField(max_length=500, default=None)
+    university=models.TextField(max_length=20, default=None)
     degree=models.TextField(max_length=20, default=None)
     degree_specialisations=models.TextField(max_length=50, default=None)
     degree_cgpa=models.DecimalField(max_digits=3,decimal_places=1)
@@ -26,17 +26,23 @@ class User(models.Model):
 
     # Intermediate School Detail
 
-    intermediate=models.TextField(max_length=500, default=None)
+    intermediate=models.TextField(max_length=30, default=None)
     intermediate_specialisations=models.TextField(max_length=50, default=None)
     intermediate_percentage=models.DecimalField(max_digits=4,decimal_places=2)
     intermediate_date=models.DateField()
 
     #School Detail
-    matriculation=models.TextField(max_length=500, default=None)
+    matriculation=models.TextField(max_length=30, default=None)
     #matriculation_specialisations=models.TextField(max_length=500, default=None)
     matriculation_percentage=models.DecimalField(default=8.8,max_digits=2,decimal_places=1)
     matriculation_date=models.DateField()
 
+    #Exprience
+
+    job_profile=models.TextField(max_length=20, default=None)
+    organisation=models.TextField(max_length=20, default=None)
+    job_description=models.TextField(max_length=20, default=None)
+    job_duration=models.TextField(max_length=20, default=None)
 
 def __str__(self):
     name = self.first_name
