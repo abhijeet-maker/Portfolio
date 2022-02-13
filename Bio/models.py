@@ -18,11 +18,11 @@ class User(models.Model):
 
     #College
 
-    #university=models.TextField(max_length=500, default=None)
-    #degree=models.TextField(max_length=20, default=None)
-    #degree_specialisations=models.TextField(max_length=50, default=None)
-    #degree_cgpa=models.DecimalField(max_digits=3,decimal_places=1)
-    #degree_date=models.DateField()
+    university=models.TextField(max_length=500, default=None)
+    degree=models.TextField(max_length=20, default=None)
+    degree_specialisations=models.TextField(max_length=50, default=None)
+    degree_cgpa=models.DecimalField(max_digits=3,decimal_places=1)
+    degree_date=models.DateField()
 
     # Intermediate School Detail
 
