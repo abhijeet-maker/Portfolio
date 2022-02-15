@@ -7,9 +7,9 @@ from django.http import HttpResponse
 def index(request):
     data=User.objects.all()
     achievements=User.objects.values('achievements')
-    achievements=list(achievements)[0]['achievements']
+    achievements=list(achievements)[0]('achievements')
     #print("achievements-----------",achievements.get(achievements="achievements"))
-    print(list(achievements)[0]['achievements'])
+    #print(list(achievements)[0]('achievements'))
     #print("achievements***********",achievements.tolist())
     #for user in data:
     #    print(user.first_name,user.last_name,user.address)
