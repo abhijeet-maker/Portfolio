@@ -6,13 +6,9 @@ from django.http import HttpResponse
 # Create your views here.
 def index(request):
     data=User.objects.all()
-    achievements=User.objects.get('achievements')
-    #print("achievements",achievements.values())
-    print("achievements", achievements.items())
-
-    for key, values in achievements.items():
-        for i in values:
-            print(key, " : ", i)
+    achievements=User.objects.values('achievements')
+    print("achievements",achievements.get(achievements=""))
+    print("achievements***********",achievements)
     #for user in data:
     #    print(user.first_name,user.last_name,user.address)
     #args={'user':user}
