@@ -9,7 +9,7 @@ def index(request):
     achievements=User.objects.values('achievements')
     achievements=list(achievements)
     achievements=achievements[0]
-    achievements=achievements[0]
+    #achievements=achievements
     #print("achievements-----------",achievements.get(achievements="achievements"))
     print(achievements)
     #print("achievements***********",achievements.tolist())
