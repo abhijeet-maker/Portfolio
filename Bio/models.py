@@ -39,17 +39,17 @@ class User(models.Model):
 
     #Exprience
 
-    job_profile=models.TextField(max_length=200, default=None)
-    organisation=models.TextField(max_length=200, default=None)
-    job_description=models.TextField(max_length=200, default=None)
+    job_profile=models.TextField(max_length=500, default=None)
+    organisation=models.TextField(max_length=500, default=None)
+    job_description=models.TextField(max_length=500, default=None)
     job_duration=models.TextField(max_length=200, default=None)
     os=models.TextField(max_length=200, default=None)
     language=models.TextField(max_length=200, default=None)
     database=models.TextField(max_length=200, default=None)
-    tools=models.TextField(max_length=200, default=None)
-    framework=models.TextField(max_length=200, default=None)
-    methodology=models.TextField(max_length=200, default=None)
-    achievements=models.TextField(max_length=200, default=None)
+    tools=models.TextField(max_length=500, default=None)
+    framework=models.TextField(max_length=500, default=None)
+    methodology=models.TextField(max_length=500, default=None)
+    achievements=models.TextField(max_length=500, default=None)
 
 def __str__(self):
     name = self.first_name
