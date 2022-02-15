@@ -43,6 +43,13 @@ class User(models.Model):
     organisation=models.TextField(max_length=20, default=None)
     job_description=models.TextField(max_length=20, default=None)
     job_duration=models.TextField(max_length=20, default=None)
+    os=models.TextField(max_length=20, default=None)
+    language=models.TextField(max_length=20, default=None)
+    database=models.TextField(max_length=20, default=None)
+    tools=models.TextField(max_length=20, default=None)
+    framework=models.TextField(max_length=20, default=None)
+    methodology=models.TextField(max_length=20, default=None)
+    achievements=models.TextField(max_length=20, default=None)
 
 def __str__(self):
     name = self.first_name
