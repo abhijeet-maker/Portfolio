@@ -7,7 +7,7 @@ from django.http import HttpResponse
 def index(request):
     data=User.objects.all()
     achievements=User.objects.values('achievements')
-    print("achievements",achievements)
+    print("achievements",achievements.values())
     for user in data:
         print(user.first_name,user.last_name,user.address)
     #args={'user':user}
