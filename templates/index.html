@@ -196,7 +196,10 @@
                 {% for achievement in achievements %}
                 <li>
                     <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                    {{achievement}}
+
+                    {% autoescape on %}
+                    {{ achievement | linebreaksbr }}
+                    {% endautoescape %}
                 </li>
                 {% endfor %}
             </ul>
