@@ -11,7 +11,8 @@ def index(request):
     achievements=list(achievements[0])
     #achievements=achievements
     #print("achievements-----------",achievements.get(achievements="achievements"))
-    print("achievements",achievements,"**********",achievements[1])
+    print("achievements",achievements,"**********")
+    print("achievements**********", achievements)
     #print("achievements***********",achievements.tolist())
     #for user in data:
     #    print(user.first_name,user.last_name,user.address)
