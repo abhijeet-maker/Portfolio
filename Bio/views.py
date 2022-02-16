@@ -8,6 +8,7 @@ def index(request):
     data=User.objects.all()
     achievements=User.objects.values('achievements')
     achievements=list(achievements)
+    print("achievements", achievements, "**********")
     achievements=str(achievements[0]).split(":")[1]
     achievements=achievements.split("'")[1]
     achievements=achievements.split("\\r\\n")
