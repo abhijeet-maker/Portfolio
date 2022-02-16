@@ -13,7 +13,7 @@ class User(models.Model):
     # phone=models.IntegerField(default=None)
 
     mail = models.CharField(max_length=30, default="MI01071997GMAIL.COM")
-    prof_img = models.ImageField(upload_to='profile_pic/', default=None)
+    prof_img = models.ImageField(upload_to='static/Bio/assets/img/', default=None)
     about = models.TextField(default=None)
 
     #College
