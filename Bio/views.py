@@ -4,7 +4,7 @@ from django.shortcuts import render
 from Bio.models import User
 from django.http import HttpResponse
 # Create your views here.
-def index(request):
+def admin(request):
     return render(request, 'admin.html')
 
 def index(request):
