@@ -14,6 +14,7 @@ def index(request):
     print("achievements",achievements,"**********")
     print("achievements**********", list(achievements[0]))
     print("achievements*****",str(achievements[0]))
+    print("achievements*****",str(achievements[0]).split(":"))
     #print("achievements***********",achievements.tolist())
     #for user in data:
     #    print(user.first_name,user.last_name,user.address)
