@@ -23,13 +23,11 @@ from Bio import views
 
 
 urlpatterns = [
-    path('admin/', views.admin, name="admin"),
-    path('admin/', views.admin, name="index"),
+    path('admin/', admin.site.urls),
     path('index/', views.index, name="index"),
     path('', views.index),
     path('home/', views.index, name="home"),
 #path('download_completed/', views.download_completed),
 ]
-
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
