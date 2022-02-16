@@ -15,6 +15,9 @@ def index(request):
         achievements=achievements.split("\\r\\n")
     else:
         pass
+    job_description=User.objects.values('job_description')
+    job_descriptions=list(job_description)
+    print("job_description",job_descriptions)
     #achievements=list(achievements)
     #achievements=achievements
     #print("achievements-----------",achievements.get(achievements="achievements"))
@@ -32,4 +35,4 @@ def index(request):
     # context = {'latest_question_list': latest_question_list}
     #return render(request, 'index.html',{'user':user})
 
-    return render(request, 'index.html',{'data':data,'achievements':achievements})
+    return render(request, 'index.html',{'data':data,'achievements':achievements,'job_descriptions':job_descriptions})

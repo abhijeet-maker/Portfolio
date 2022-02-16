@@ -89,7 +89,9 @@
                 <div class="flex-grow-1">
                     <h3 class="mb-0">{{user.job_profile}}</h3>
                     <div class="subheading mb-3">{{user.organisation}}</div>
-                    <p>{{user.job_description}}</p>
+                    {% for job_description in job_descriptions %}
+                    <p>{{job_description}}</p>
+                    {% endfor %}
                 </div>
                 <div class="flex-shrink-0"><span class="text-primary">{{user.job_duration}}</span></div>
             </div>
