@@ -8,13 +8,15 @@ def index(request):
     data=User.objects.all()
     achievements=User.objects.values('achievements')
     achievements=list(achievements)
+    achievements=str(achievements[0]).split(":")[1]
+    achievements=achievements.split("'")[1]
     #achievements=list(achievements)
     #achievements=achievements
     #print("achievements-----------",achievements.get(achievements="achievements"))
     print("achievements",achievements,"**********")
-    print("achievements**********", list(achievements[0]))
-    print("achievements*****",str(achievements[0]))
-    print("achievements*****",str(achievements[0]).split(":"))
+    #print("achievements**********", list(achievements[0]))
+    #print("achievements*****",str(achievements[0]))
+    #print("achievements*****",str(achievements[0]).split(":")[1])
     #print("achievements***********",achievements.tolist())
     #for user in data:
     #    print(user.first_name,user.last_name,user.address)
