@@ -23,7 +23,8 @@ from Bio import views
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('admin/', views.admin, name="admin"),
+    path('admin/', views.admin, name="index"),
     path('index/', views.index, name="index"),
     path('', views.index),
     path('home/', views.index, name="home"),

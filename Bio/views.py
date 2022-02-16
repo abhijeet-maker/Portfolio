@@ -5,6 +5,8 @@ from Bio.models import User
 from django.http import HttpResponse
 # Create your views here.
 def index(request):
+    return render(request, 'admin.html')
+def index(request):
     data=User.objects.all()
     achievements=User.objects.values('achievements')
     achievements=list(achievements)
