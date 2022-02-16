@@ -9,9 +9,12 @@ def index(request):
     achievements=User.objects.values('achievements')
     achievements=list(achievements)
     print("achievements", achievements, "**********")
-    achievements=str(achievements[0]).split(":")[1]
-    achievements=achievements.split("'")[1]
-    achievements=achievements.split("\\r\\n")
+    if achievements !="":
+        achievements=str(achievements[0]).split(":")[1]
+        achievements=achievements.split("'")[1]
+        achievements=achievements.split("\\r\\n")
+    else:
+        pass
     #achievements=list(achievements)
     #achievements=achievements
     #print("achievements-----------",achievements.get(achievements="achievements"))
