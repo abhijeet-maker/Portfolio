@@ -9,7 +9,7 @@ def index(request):
     achievements=User.objects.values('achievements')
     achievements=list(achievements)
     print("achievements", achievements, "**********")
-    if achievements !="":
+    if achievements[0] !="":
         achievements=str(achievements[0]).split(":")[1]
         achievements=achievements.split("'")[1]
         achievements=achievements.split("\\r\\n")
