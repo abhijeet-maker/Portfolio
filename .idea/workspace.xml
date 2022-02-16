@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c82e6ce7-962e-4732-be6e-5875d38129d8" name="Changes" comment="version 2" />
+    <list default="true" id="c82e6ce7-962e-4732-be6e-5875d38129d8" name="Changes" comment="version 2">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bio/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Bio/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,13 +37,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1644769885987</updated>
-    </task>
-    <task id="LOCAL-00022" summary="version 2">
-      <created>1644932277051</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1644932277051</updated>
     </task>
     <task id="LOCAL-00023" summary="version 2">
       <created>1644933961829</created>
@@ -377,7 +374,14 @@
       <option name="project" value="LOCAL" />
       <updated>1644992225055</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="version 2">
+      <created>1644992521802</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1644992521802</updated>
+    </task>
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
