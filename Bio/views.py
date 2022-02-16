@@ -17,7 +17,13 @@ def index(request):
         pass
     job_description=User.objects.values('job_description')
     job_descriptions=list(job_description)
-    print("job_description",job_descriptions)
+    if len(job_descriptions) != 0:
+        job_descriptions = str(job_descriptions[0]).split(":")[1]
+        job_descriptions = achievements.split("'")[1]
+        job_descriptions = achievements.split("\\r\\n\\r\\n")
+    else:
+        pass
+    print("job_description", job_descriptions)
     #achievements=list(achievements)
     #achievements=achievements
     #print("achievements-----------",achievements.get(achievements="achievements"))
