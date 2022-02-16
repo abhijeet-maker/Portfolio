@@ -19,6 +19,7 @@ def index(request):
     job_descriptions=list(job_description)
     if len(job_descriptions) != 0:
         job_descriptions = str(job_descriptions[0]).split(":")[1]
+        print(job_descriptions)
         job_descriptions = achievements.split("'")[1]
         job_descriptions = achievements.split("\\r\\n\\r\\n")
     else:
