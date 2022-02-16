@@ -10,7 +10,7 @@ def index(request):
     achievements=list(achievements)
     achievements=str(achievements[0]).split(":")[1]
     achievements=achievements.split("'")[1]
-    achievements=achievements.split("\r\n")
+    achievements=achievements.split("\\r\\n")
     #achievements=list(achievements)
     #achievements=achievements
     #print("achievements-----------",achievements.get(achievements="achievements"))
