@@ -20,10 +20,10 @@ from django.conf.urls.static import static
 from django.conf.urls import *
 from django.views.static import serve
 from Bio import views
-
+from Bio.admin import admin_site
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('admin/', admin_site.urls),
     path('index/', views.index, name="index"),
     path('', views.index),
     path('home/', views.index, name="home"),
