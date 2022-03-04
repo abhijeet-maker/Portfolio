@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c82e6ce7-962e-4732-be6e-5875d38129d8" name="Changes" comment="version 2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bio/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Bio/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +34,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/static/Bio/assets/img" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PythonContentEntriesConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -52,13 +50,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1644769885987</updated>
-    </task>
-    <task id="LOCAL-00045" summary="version 2">
-      <created>1644986014374</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1644986014374</updated>
     </task>
     <task id="LOCAL-00046" summary="version 2">
       <created>1644986117532</created>
@@ -396,7 +387,14 @@
       <option name="project" value="LOCAL" />
       <updated>1644998901843</updated>
     </task>
-    <option name="localTasksCounter" value="94" />
+    <task id="LOCAL-00094" summary="version 2">
+      <created>1645211586432</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1645211586432</updated>
+    </task>
+    <option name="localTasksCounter" value="95" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
