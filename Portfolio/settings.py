@@ -87,7 +87,7 @@ DATABASES = {
         'USER': 'postgres',
         'PASSWORD': 'admin',
         'HOST': 'localhost',
-        'PORT': '5432',
+        'PORT': 5432,
     },
     'read_replica': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
