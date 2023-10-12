@@ -1,0 +1,15 @@
+APP_ENV=app_env
+DB_MASTER_HOST=db_master_host
+DB_MASTER_PORT=db_master_port
+DB_MASTER_USER=db_master_user
+DB_MASTER_PASSWORD=db_master_password
+DB_MASTER_NAME=db_master_name
+DB_SLAVE_HOST=db_slave_host
+DB_SLAVE_PORT=db_slave_port
+DB_SLAVE_USER=db_slave_user
+DB_SLAVE_PASSWORD=db_slave_password
+DB_SLAVE_NAME=db_slave_name
+BUGSNAG_KEY=bugsnag_key
+LMS_CONFIGURATION_API=http://lms_configuration_url
+LMS_REPAYMENT_API=http://lms_repaymentschedule_url
+LMS_CASE_API=http://lms_caseurl
