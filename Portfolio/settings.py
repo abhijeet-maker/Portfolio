@@ -25,7 +25,7 @@ SECRET_KEY = 'wwbuc1__+r55wcbedhuv8klb(625h*5c4m1(gzc@nc6r%byakj'
 DEBUG = True
 
 # ALLOWED_HOSTS = []
-ALLOWED_HOSTS = ['myfolioabhi01.herokuapp.com','*', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['0.0.0.0','myfolioabhi01.herokuapp.com','*', 'localhost', '127.0.0.1','192.3.3.233']
 CORS_ORIGIN_ALLOW_ALL = True
 
 # Application definition
@@ -76,27 +76,28 @@ WSGI_APPLICATION = 'Portfolio.wsgi.application'
 #DATABASES = {
 #    'default': {
 #        'ENGINE': 'django.db.backends.sqlite3',
-#        'NAME': BASE_DIR / 'db.sqlite3',
+#        #'NAME': BASE_DIR / 'db.sqlite3',
+#       'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 #    }
 #}
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
-        'USER': 'postgres',
-        'PASSWORD': 'admin',
-        'HOST': '127.0.0.1',
-        'PORT': 5432,
-    },
-    'read_replica': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': '',
-        'USER': '',
-        'PASSWORD': '',
-        'HOST': '',
-        'PORT': '',
-    },
+        'NAME': 'main_db',
+        'USER': 'root',
+        'PASSWORD': 'admin',
+        'HOST': '192.3.3.233',
+        'PORT': 5433,
+    }
+#    'read_replica': {
+#        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#        'NAME': '',
+#        'USER': '',
+#        'PASSWORD': '',
+#        'HOST': '',
+#        'PORT': '',
+#    },
 }
 
 

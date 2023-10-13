@@ -1,0 +1,46 @@
+FROM ubuntu:20.04
+RUN apt-get update && apt-get install -y tzdata && apt install -y python3.8 python3-pip
+RUN apt-get install postgresql postgresql-client -y
+RUN apt install python python3-dev libpq-dev nginx -y
+RUN pip install django gunicorn psycopg2
+ADD . /app
+FROM python:3.9
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
+
+# Set the working directory in the container
+WORKDIR /app
+
+# Copy the requirements file into the container at /app
+COPY requirements.txt /app/
+
+# Install any needed packages specified in requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy the current directory contents into the container at /app
+COPY . /app/
+RUN echo "host all  all 0.0.0.0/0  md5" >> /etc/postgresql/12/main/pg_hba.conf
+RUN echo "local all  postgress   md5" >> /etc/postgresql/12/main/pg_hba.conf
+RUN /etc/init.d/postgresql restart
+# Expose the port on which the Django app will run (default is 8000)
+EXPOSE 8000
+RUN	/etc/init.d/postgresql start &&\
+	psql --command "CREATE USER root WITH SUPERUSER PASSWORD 'admin';" &&\
+	createdb -O root xenonstack
+
+RUN echo "host all  all	0.0.0.0/0  md5" >> /etc/postgresql/12/main/pg_hba.conf
+RUN echo "local all  postgress   md5" >> /etc/postgresql/12/main/pg_hba.conf
+RUN echo "listen_addresses='*'" >> /etc/postgresql/12/main/postgresql.conf
+
+# Expose the PostgreSQL port
+EXPOSE 5432
+
+# Add VOLUMEs to allow backup of databases
+VOLUME  ["/var/lib/postgresql"]
+
+# Set the default command to run when starting the container
+CMD ["/usr/lib/postgresql/12/bin/postgres", "-D", "/var/lib/postgresql", "-c", "config_file=/etc/postgresql/12/main/postgresql.conf"]
+
+# Run the Django app
+CMD ["python3", "manage.py", "runserver", "0.0.0.0:8000"]
+

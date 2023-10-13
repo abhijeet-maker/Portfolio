@@ -2,23 +2,20 @@
 FROM python:3.9
 
 # Set environment variables
-ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
-# Set the working directory in the container
+# Set the working directory within the container
 WORKDIR /app
 
-# Copy the requirements file into the container at /app
-COPY requirements.txt /app/
+# Copy the current directory contents into the container at /app
+ADD . /app
 
 # Install any needed packages specified in requirements.txt
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install -r requirements.txt
+RUN pip install django gunicorn psycopg2
+# Make port 80 available to the world outside this container
+EXPOSE 80
 
-# Copy the current directory contents into the container at /app
-COPY . /app/
-
-# Expose the port on which the Django app will run (default is 8000)
-EXPOSE 8000
-
-# Run the Django app
+# Define the command to run your application
 CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+#CMD ["gunicorn", "--bind", ":8000", "--workers", "3", "djangokubernetesproject.wsgi"]
